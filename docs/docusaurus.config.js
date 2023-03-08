@@ -2,7 +2,7 @@ module.exports = {
   title: 'VisionCamera',
   tagline: '📸 The Camera library that sees the vision.',
   url: 'https://mrousavy.github.io',
-  baseUrl: '/react-native-vision-camera/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
   favicon: './favicon.ico',
@@ -10,6 +10,7 @@ module.exports = {
   projectName: 'react-native-vision-camera',
   themeConfig: {
     algolia: {
+      appId: 'BH4D9OD16A',
       apiKey: 'ab7f44570bb62d0e07c0f7d92312ed1a',
       indexName: 'react-native-vision-camera',
     },
@@ -94,11 +95,40 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Marc Rousavy`,
     },
+    image: 'img/11.png',
+    metadata: [
+      {
+        name: 'keywords',
+        content: 'documentation, coding, docs, guides, camera, react, native, react-native'
+      },
+      {
+        name: 'og:title',
+        content: 'VisionCamera Documentation'
+      },
+      {
+        name: 'og:type',
+        content: 'application'
+      },
+      {
+        name: 'og:description',
+        content: '📸 The Camera library that sees the vision.'
+      },
+      {
+        name: 'og:image',
+        content: 'https://www.react-native-vision-camera.com/img/11.png'
+      },
+    ]
   },
   presets: [
     [
       '@docusaurus/preset-classic',
       {
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 1.0,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/mrousavy/react-native-vision-camera/edit/main/docs/',
